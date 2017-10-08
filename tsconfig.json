@@ -1,8 +1,16 @@
 {
     "compilerOptions": {
+        "lib": [
+            "es5",
+            "es2015.promise"
+        ],
         "module": "commonjs",
         "target": "es5",
+        "declaration": true,
         "noImplicitAny": false,
-        "sourceMap": false
-    }
+        "outDir": "./dist"
+    },
+    "include": [
+        "src/**/*"
+    ]
 }
