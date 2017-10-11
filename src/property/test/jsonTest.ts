@@ -12,7 +12,7 @@ export class JsonTest {
         this.getName<User>((u) => u.userName);
     }
 
-    public static getName<T>(obj: (o: T) => any): string {
+    public static getName<T>(obj: (o: T) => boolean | number | string): string {
         console.log(obj.toString());
         return null;
     }
