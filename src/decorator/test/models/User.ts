@@ -1,13 +1,22 @@
 function column(name: string, table: string) {
-    return (target, propertyKey: string, descriptor: PropertyDescriptor) => {
+    return (target, propertyKey: string) => {
         console.log("g(): called");
     };
 }
 
 export class User {
-    // tslint:disable-next-line:variable-name
-    private _id: number;
-    get id(): number {
-        return this._id;
-    }
+
+    @column("id", "user")
+    public id: number;
+    public userName: string;
+    public email: string;
+    public mobile: string;
+    public password: string;
+    public displayName: string;
+    public createTime: Date;
+    public updateTime: Date;
+    public deleted: number;
+
+
+
 }

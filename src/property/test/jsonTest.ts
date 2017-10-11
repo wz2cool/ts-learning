@@ -9,5 +9,12 @@ export class JsonTest {
 
         const json = JSON.stringify(user);
         console.log(json);
+        this.getName<User>((u) => u.userName);
     }
+
+    public static getName<T>(obj: (o: T) => any): string {
+        console.log(obj.toString());
+        return null;
+    }
+
 }
