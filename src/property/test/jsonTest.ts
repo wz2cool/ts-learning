@@ -1,3 +1,4 @@
+import * as util from "util";
 import { User } from "../models/User";
 
 export class JsonTest {
@@ -14,6 +15,8 @@ export class JsonTest {
 
     public static getName<T>(obj: (o: T) => boolean | number | string): string {
         console.log(obj.toString());
+
+        util.isArray
         return null;
     }
 
