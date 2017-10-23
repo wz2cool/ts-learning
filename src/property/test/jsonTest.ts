@@ -15,9 +15,15 @@ export class JsonTest {
 
     public static getName<T>(obj: (o: T) => boolean | number | string): string {
         console.log(obj.toString());
-
-        util.isArray
         return null;
     }
 
+    public static createObject<T>(o: T | { new(): T }): T {
+        if (typeof o === "function") {
+            return new o();
+        } else {
+            const v = o.constructor as { new(): T };
+            return new v();
+        }
+    }
 }

@@ -2,7 +2,7 @@
   "name": "ts-learning",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/property/index.js",
+  "main": "dist/inversify/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +22,8 @@
     "typescript": "^2.5.3"
   },
   "dependencies": {
+    "inversify": "^4.3.0",
+    "reflect-metadata": "^0.1.10",
     "util": "^0.10.3"
   }
 }

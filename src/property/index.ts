@@ -1,3 +1,9 @@
+import { User } from "./models/User";
 import { JsonTest } from "./test/jsonTest";
 
-JsonTest.run();
+const user = new User();
+user.userName = "frank";
+
+const result = JsonTest.createObject<User>(user);
+
+console.log(result);
